@@ -74,7 +74,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 0 16px 64px;
+            padding: 0 clamp(10px, 3.5vw, 16px) 64px;
             overflow-x: hidden;
             position: relative;
             background-color: var(--color-chalk-bg);
@@ -89,7 +89,6 @@
             z-index: 0;
             pointer-events: none;
             background:
-                /* Trama de brotes y destellos botánicos */
                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68'%3E%3Cpath d='M34 14 C34 14 24 28 24 38 C24 44.5 28.5 49 34 49 C39.5 49 44 44.5 44 38 C44 28 34 14 34 14 Z' fill='%2379A13C' fill-opacity='0.12' stroke='%234B612C' stroke-width='1.2' stroke-opacity='0.25'/%3E%3Cpath d='M34 26 C34 26 29 34 29 39 C29 41.8 31.2 44 34 44 C36.8 44 39 41.8 39 39 C39 34 34 26 34 26 Z' fill='%234B612C' fill-opacity='0.10'/%3E%3Cpath d='M8 8 L10 14 L16 16 L10 18 L8 24 L6 18 L0 16 L6 14 Z' fill='%2379A13C' fill-opacity='0.22'/%3E%3Cpath d='M60 52 L61.5 56.5 L66 58 L61.5 59.5 L60 64 L58.5 59.5 L54 58 L58.5 56.5 Z' fill='%233884C5' fill-opacity='0.22'/%3E%3Ccircle cx='60' cy='12' r='2.5' fill='%233884C5' fill-opacity='0.25'/%3E%3Ccircle cx='8' cy='56' r='2.2' fill='%2379A13C' fill-opacity='0.25'/%3E%3C/svg%3E"),
                 linear-gradient(180deg, #FFFFFF 0%, #F9FBF6 28%, #F2F7EC 65%, #E9F1E0 100%);
             background-size: 68px 68px, 100% 100%;
@@ -128,7 +127,7 @@
             left: 50%;
             transform: translateX(-50%);
             width: min(580px, 108vw);
-            height: 154px;
+            height: 165px;
             background: var(--color-bone-pure);
             border-radius: 0 0 50% 50% / 0 0 100% 100%;
             box-shadow: var(--shadow-canopy);
@@ -149,21 +148,22 @@
         }
 
         /* ==========================================================================
-           4. SHELL PRINCIPAL MOBILE-FIRST
+           4. SHELL PRINCIPAL MOBILE-FIRST Y 100% RESPONSIVE
            ========================================================================== */
         .master-hub-shell {
             width: 100%;
             max-width: 485px;
+            min-width: 0;
             display: flex;
             flex-direction: column;
             gap: 22px;
             z-index: 10;
             position: relative;
-            padding-top: 22px;
+            padding-top: 14px;
         }
 
         /* ==========================================================================
-           5. HERO LOGO SUELTO ADELANTE DEL ÓVALO + TEXTO EDITORIAL
+           5. HERO LOGO CON MÁXIMA JERARQUÍA Y PESO VISUAL
            ========================================================================== */
         .hero-logo-monument {
             width: 100%;
@@ -178,21 +178,21 @@
 
         .logo-free-stage {
             width: 100%;
-            max-width: 250px;
-            height: 90px;
+            max-width: min(310px, 86vw);
+            height: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             cursor: pointer;
-            filter: drop-shadow(0 4px 10px rgba(75, 97, 44, 0.15));
+            filter: drop-shadow(0 6px 14px rgba(75, 97, 44, 0.22));
             animation: slowVitalityFloat 7.5s ease-in-out infinite alternate;
-            margin: 4px auto 0;
+            margin: 2px auto 0;
         }
 
         @keyframes slowVitalityFloat {
             0%   { transform: translateY(0px) scale(1); }
-            50%  { transform: translateY(-3px) scale(1.015); filter: drop-shadow(0 8px 18px rgba(75, 97, 44, 0.22)); }
+            50%  { transform: translateY(-3px) scale(1.02); filter: drop-shadow(0 10px 22px rgba(75, 97, 44, 0.28)); }
             100% { transform: translateY(0px) scale(1); }
         }
 
@@ -208,25 +208,26 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 48px;
+            margin-top: 36px;
         }
 
         .brand-motto-headline {
             font-family: var(--font-display);
-            font-size: clamp(1.42rem, 5vw, 1.72rem);
+            font-size: clamp(1.28rem, 5vw, 1.72rem);
             font-weight: 700;
             font-style: italic;
             color: var(--color-text-dark);
             line-height: 1.18;
             letter-spacing: -0.02em;
+            word-break: break-word;
         }
 
         .brand-lead-caption {
             font-family: var(--font-sans);
-            font-size: 0.90rem;
+            font-size: clamp(0.84rem, 2.8vw, 0.90rem);
             line-height: 1.48;
             color: var(--color-text-body);
-            max-width: 92%;
+            max-width: 94%;
             margin-top: 7px;
             font-weight: 500;
         }
@@ -240,17 +241,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 7px;
             flex-wrap: wrap;
             margin-top: 14px;
+            width: 100%;
         }
 
         .pill-badge-seal {
             background: #FFFFFF;
             border: 1.5px solid rgba(121, 161, 60, 0.32);
             border-radius: 999px;
-            padding: 5px 13px;
-            font-size: 0.72rem;
+            padding: 5px 11px;
+            font-size: clamp(0.68rem, 2.5vw, 0.72rem);
             font-weight: 800;
             color: var(--color-text-dark);
             box-shadow: 0 4px 12px rgba(75, 97, 44, 0.05);
@@ -258,6 +260,7 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
+            white-space: nowrap;
         }
 
         /* ==========================================================================
@@ -267,11 +270,11 @@
             background: #FFFFFF;
             border: 2px solid #25D366;
             border-radius: 28px 16px 28px 16px;
-            padding: 22px 22px;
+            padding: clamp(16px, 4.5vw, 22px);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 16px;
+            gap: 12px;
             text-decoration: none;
             color: var(--color-text-dark);
             box-shadow: 0 12px 32px rgba(37, 211, 102, 0.20);
@@ -306,6 +309,7 @@
             display: flex;
             flex-direction: column;
             gap: 3px;
+            min-width: 0;
         }
 
         .hero-live-beacon {
@@ -313,10 +317,10 @@
             align-items: center;
             gap: 6px;
             font-family: var(--font-mono);
-            font-size: 0.68rem;
+            font-size: clamp(0.62rem, 2.4vw, 0.68rem);
             font-weight: 800;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             color: #1FAF53;
         }
 
@@ -327,6 +331,7 @@
             background: #25D366;
             box-shadow: 0 0 10px #25D366;
             animation: pulseGlow 1.8s infinite;
+            flex-shrink: 0;
         }
 
         @keyframes pulseGlow {
@@ -336,22 +341,24 @@
 
         .hero-action-title {
             font-family: var(--font-display);
-            font-size: 1.35rem;
+            font-size: clamp(1.15rem, 4.8vw, 1.35rem);
             font-weight: 900;
             line-height: 1.15;
             color: var(--color-text-dark);
             letter-spacing: -0.01em;
+            word-break: break-word;
         }
 
         .hero-action-caption {
-            font-size: 0.84rem;
+            font-size: clamp(0.76rem, 2.6vw, 0.84rem);
             color: var(--color-text-muted);
             font-weight: 600;
+            line-height: 1.3;
         }
 
         .whatsapp-bubble-btn {
-            width: 52px;
-            height: 52px;
+            width: clamp(44px, 12vw, 52px);
+            height: clamp(44px, 12vw, 52px);
             border-radius: 50%;
             background: #25D366;
             color: #FFFFFF;
@@ -368,8 +375,8 @@
         }
 
         .whatsapp-bubble-btn svg {
-            width: 26px;
-            height: 26px;
+            width: clamp(22px, 6vw, 26px);
+            height: clamp(22px, 6vw, 26px);
             fill: #FFFFFF;
         }
 
@@ -379,20 +386,21 @@
         .morph-bento-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 14px;
+            gap: clamp(10px, 3vw, 14px);
         }
 
         .bento-cell {
-            padding: 20px 18px;
+            padding: clamp(16px, 4vw, 20px) clamp(14px, 3.5vw, 18px);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            min-height: 150px;
+            min-height: 145px;
             text-decoration: none;
             position: relative;
             overflow: hidden;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             cursor: pointer;
+            min-width: 0;
         }
 
         .bento-cell:hover {
@@ -464,6 +472,7 @@
             padding: 18px 20px;
             box-shadow: var(--shadow-float);
             color: var(--color-text-dark);
+            gap: 10px;
         }
 
         .cell-wide-card:hover {
@@ -490,6 +499,7 @@
             font-size: 1.15rem;
             font-weight: 800;
             transition: transform 0.25s ease;
+            flex-shrink: 0;
         }
 
         .bento-cell:hover .cell-arrow {
@@ -498,10 +508,11 @@
 
         .cell-title {
             font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: clamp(1.05rem, 4vw, 1.25rem);
             font-weight: 900;
             line-height: 1.15;
             letter-spacing: -0.01em;
+            word-break: break-word;
         }
 
         .cell-desc {
@@ -529,7 +540,7 @@
 
         .showcase-heading {
             font-family: var(--font-display);
-            font-size: 1.25rem;
+            font-size: clamp(1.15rem, 4.5vw, 1.25rem);
             font-weight: 800;
             color: var(--color-text-dark);
         }
@@ -558,7 +569,7 @@
         }
 
         .product-porcelain-card {
-            flex: 0 0 205px;
+            flex: 0 0 clamp(180px, 58vw, 205px);
             scroll-snap-align: start;
             background: #FFFFFF;
             border: 1.5px solid rgba(121, 161, 60, 0.28);
@@ -755,7 +766,7 @@
             background: #FFFFFF;
             border: 1.5px solid rgba(121, 161, 60, 0.35);
             border-radius: 22px;
-            padding: 18px 20px;
+            padding: clamp(16px, 4vw, 20px);
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -770,7 +781,7 @@
 
         .pod-title-text {
             font-family: var(--font-display);
-            font-size: 1.15rem;
+            font-size: clamp(1.05rem, 4vw, 1.15rem);
             font-weight: 800;
             color: var(--color-text-dark);
         }
@@ -787,6 +798,7 @@
             gap: 10px;
             font-size: 0.85rem;
             color: var(--color-text-body);
+            line-height: 1.4;
         }
 
         .bullet-sun {
@@ -794,10 +806,11 @@
             font-weight: 800;
             font-size: 0.95rem;
             line-height: 1;
+            flex-shrink: 0;
         }
 
         /* ==========================================================================
-           11. FOOTER NOBLE
+           11. FOOTER NOBLE Y TOTALMENTE ADAPTABLE A PANTALLAS ESTRECHAS
            ========================================================================== */
         .hub-noble-footer {
             margin-top: 10px;
@@ -807,27 +820,40 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            gap: 8px;
+            gap: 10px;
+            width: 100%;
         }
 
         .footer-brand-monument {
             font-family: var(--font-display);
-            font-size: 1.35rem;
+            font-size: clamp(1.15rem, 5vw, 1.35rem);
             font-weight: 900;
             letter-spacing: 0.08em;
             color: var(--color-text-dark);
+            word-break: break-word;
         }
 
+        /* Enlaces fluidos sin corte horizontal */
         .footer-social-links {
             display: flex;
-            gap: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 6px 10px;
             font-size: 0.78rem;
             font-weight: 700;
+            width: 100%;
+            max-width: 100%;
         }
 
         .footer-social-links a {
             color: var(--color-palta-deep);
             text-decoration: none;
+            padding: 2px 4px;
+        }
+
+        .footer-social-links span {
+            color: rgba(121, 161, 60, 0.4);
         }
 
         .footer-address-caption {
@@ -835,6 +861,7 @@
             color: var(--color-text-muted);
             line-height: 1.5;
             max-width: 380px;
+            word-break: break-word;
         }
 
         .footer-legal-copy {
@@ -862,11 +889,12 @@
     <!-- ENVOLVENTE MÓVIL PRINCIPAL -->
     <main class="master-hub-shell">
 
-        <!-- 1. CABECERA: LOGO SUELTO ADELANTE DEL ÓVALO + FRASE SIMÉTRICA DEBAJO -->
+        <!-- 1. CABECERA: LOGO SUELTO ADELANTE DEL ÓVALO CON MÁXIMA JERARQUÍA -->
         <header class="hero-logo-monument">
             
-            <div class="logo-free-stage" onclick="playHaptic()">
-                <svg id="Layer_1" data-name="Layer 1" class="brand-svg-raw" xmlns="http://www.w3.org/2000/svg" viewBox="90 120 320 230">
+            <div class="logo-free-stage">
+                <!-- ViewBox optimizado al contorno exacto para darle escala y peso sin márgenes residuales -->
+                <svg id="Layer_1" data-name="Layer 1" class="brand-svg-raw" xmlns="http://www.w3.org/2000/svg" viewBox="120 115 250 218">
                     <defs>
                         <style>
                             .cls-1 { fill: #79a13c; stroke-width: 0px; }
@@ -899,7 +927,7 @@
         </header>
 
         <!-- 2. HERO CARD WHATSAPP DIRECTO -->
-        <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20%F0%9F%A5%91%20Quisiera%20pedir%20el%20men%C3%BA%20de%20viandas%20y%20organizar%20mi%20semana." target="_blank" rel="noopener noreferrer" class="card-whatsapp-portal" onclick="playHaptic()">
+        <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20%F0%9F%A5%91%20Quisiera%20pedir%20el%20men%C3%BA%20de%20viandas%20y%20organizar%20mi%20semana." target="_blank" rel="noopener noreferrer" class="card-whatsapp-portal">
             <div class="hero-left-meta">
                 <span class="hero-live-beacon"><i class="pulse-core"></i> Atención Directa WhatsApp</span>
                 <h2 class="hero-action-title">Pedí tus Viandas acá</h2>
@@ -914,7 +942,7 @@
         <section class="morph-bento-grid">
 
             <!-- 1. CELDA VERDE PALTA (#79A13C) - VIANDAS ADULTOS -->
-            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20los%20Packs%20de%20Viandas%20Saludables." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-green" onclick="playHaptic()">
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20los%20Packs%20de%20Viandas%20Saludables." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-green">
                 <div class="cell-top-bar">
                     <span class="cell-tag">01 · ADULTOS</span>
                     <span class="cell-arrow">↗</span>
@@ -926,7 +954,7 @@
             </a>
 
             <!-- 2. CELDA AZUL MEAL PLANS (#3884C5) - LÍNEA ESCOLAR JUNIOR -->
-            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20las%20Viandas%20Escolares%20Junior." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-blue" onclick="playHaptic()">
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20las%20Viandas%20Escolares%20Junior." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-blue">
                 <div class="cell-top-bar">
                     <span class="cell-tag">02 · JUNIOR</span>
                     <span class="cell-arrow">↗</span>
@@ -938,7 +966,7 @@
             </a>
 
             <!-- 3. CELDA VERDE BOSQUE (#4B612C) - MERCADO LIBRE / COMPRA DIRECTA -->
-            <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-deep" onclick="playHaptic()">
+            <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-deep">
                 <div class="cell-top-bar">
                     <span class="cell-tag">03 · COMPRA</span>
                     <span class="cell-arrow">↗</span>
@@ -950,7 +978,7 @@
             </a>
 
             <!-- 4. CELDA BLANCA BOTÁNICA - TIENDA ONLINE OFICIAL -->
-            <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer" class="bento-cell cell-white-card" onclick="playHaptic()">
+            <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer" class="bento-cell cell-white-card">
                 <div class="cell-top-bar">
                     <span class="cell-tag">04 · TIENDA</span>
                     <span class="cell-arrow">↗</span>
@@ -962,8 +990,8 @@
             </a>
 
             <!-- 5. CELDA RECTANGULAR COMPLETA: CÓMO COMPRAR EN 3 PASOS -->
-            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20men%C3%BA%20de%20esta%20semana." target="_blank" rel="noopener noreferrer" class="bento-cell cell-wide-card" onclick="playHaptic()">
-                <div style="flex:1;">
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20men%C3%BA%20de%20esta%20semana." target="_blank" rel="noopener noreferrer" class="bento-cell cell-wide-card">
+                <div style="flex:1; min-width: 0;">
                     <div class="cell-top-bar" style="margin-bottom: 2px;">
                         <span class="cell-tag" style="color: var(--color-palta-deep);">¿CÓMO COMPRAR? · 3 PASOS SIMPLES</span>
                     </div>
@@ -985,7 +1013,7 @@
             <div class="dishes-snap-slider">
 
                 <!-- PRODUCTO 1: PACK 6 VIANDAS SALUDABLES -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%206%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%206%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
                         <span class="product-badge-corner" style="background: var(--color-palta-green);">MÁS PEDIDO</span>
                         <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=480&q=80" alt="Pack 6 Viandas Saludables" loading="lazy">
@@ -995,7 +1023,7 @@
                 </a>
 
                 <!-- PRODUCTO 2: PACK 12 VIANDAS SALUDABLES -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%2012%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%2012%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
                         <span class="product-badge-corner" style="background: var(--color-palta-deep);">QUINCENAL</span>
                         <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=480&q=80" alt="Pack 12 Viandas Saludables" loading="lazy">
@@ -1005,7 +1033,7 @@
                 </a>
 
                 <!-- PRODUCTO 3: VIANDAS ESCOLARES JUNIOR 6 -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%206%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%206%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
                         <span class="product-badge-corner" style="background: var(--color-palta-blue);">KIDS</span>
                         <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 6" loading="lazy">
@@ -1015,7 +1043,7 @@
                 </a>
 
                 <!-- PRODUCTO 4: VIANDAS ESCOLARES JUNIOR 12 -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%2012%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%2012%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
                         <span class="product-badge-corner" style="background: var(--color-palta-blue-deep);">ESCOLAR</span>
                         <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 12" loading="lazy">
@@ -1116,13 +1144,50 @@
 
     </main>
 
-    <!-- CONTROLADOR JS LIVIANO DE MICRO-INTERACCIONES -->
+    <!-- CONTROLADOR JS LIVIANO DE MICRO-INTERACCIONES + AUDIO SYSTEM -->
     <script>
+        // INSTANCIACIÓN DE EFECTOS DE SONIDO (Archivos alojados en la raíz del repositorio)
+        const sndClick = new Audio('mixkit-cool-interface-click-tone-2568.mp3');
+        const sndWhatsapp = new Audio('mixkit-quick-win-video-game-notification-269.mp3');
+
+        // Precarga suave
+        sndClick.preload = 'auto';
+        sndWhatsapp.preload = 'auto';
+
         function playHaptic() {
             if ('vibrate' in navigator) {
                 try { navigator.vibrate(10); } catch(e) {}
             }
         }
+
+        function playSound(type) {
+            try {
+                if (type === 'whatsapp') {
+                    sndWhatsapp.currentTime = 0;
+                    sndWhatsapp.play().catch(() => {});
+                } else {
+                    sndClick.currentTime = 0;
+                    sndClick.play().catch(() => {});
+                }
+            } catch(e) {}
+        }
+
+        // DELEGACIÓN GLOBAL DE EVENTOS DE CLIC PARA SONIDO Y HÁPTICO
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('a, button, .logo-free-stage, .bento-cell, .product-porcelain-card, .viral-story-tile');
+            if (!target) return;
+
+            playHaptic();
+
+            const href = target.getAttribute('href') || '';
+            const isWhatsApp = href.includes('wa.me') || target.classList.contains('card-whatsapp-portal');
+
+            if (isWhatsApp) {
+                playSound('whatsapp');
+            } else {
+                playSound('click');
+            }
+        });
 
         // FÍSICA MAGNÉTICA SUAVE
         document.querySelectorAll('.bento-cell, .card-whatsapp-portal, .product-porcelain-card').forEach(elem => {
