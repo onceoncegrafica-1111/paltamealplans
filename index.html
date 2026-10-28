@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Palta Meal Plans · Comida Casera y Saludable</title>
+    <meta name="description" content="Viandas caseras, saludables y listas en minutos. Packs semanales y escolares. Envíos en CABA.">
+    
+    <meta name="theme-color" content="#F7F9F4">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+    <!-- TIPOGRAFÍAS EDITORIALES NOBLES: FRAUNCES + PLUS JAKARTA SANS + SPACE GROTESK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600;1,9..144,700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           1. SISTEMA CROMÁTICO EXTRAÍDO MATEMÁTICAMENTE DEL SVG OFICIAL:
+              - Verde Hoja Palta: #79A13C
+              - Verde Bosque / Tipográfico: #4B612C
+              - Azul Meal Plans: #3884C5
+           ========================================================================== */
+        :root {
+            --color-chalk-bg: #F7F9F4;
+            --color-bone-pure: #FFFFFF;
+            --color-bone-soft: #EDF3E4;
+            
+            --color-palta-green: #79A13C;
+            --color-palta-deep: #4B612C;
+            --color-palta-soft: #EEF5E5;
+            
+            --color-palta-blue: #3884C5;
+            --color-palta-blue-deep: #20598B;
+            --color-palta-blue-soft: #E9F3FB;
+
+            --color-warm-olive: #627E34;
+            --color-warm-accent: #E58E26;
+            --color-warm-soft: #FEF7EE;
+
+            --color-text-dark: #273417;
+            --color-text-body: #3C4A29;
+            --color-text-muted: #6B7B58;
+            
+            --font-display: 'Fraunces', Georgia, serif;
+            --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+            --font-mono: 'Space Grotesk', monospace;
+
+            --shadow-float: 0 16px 36px -10px rgba(44, 58, 26, 0.10), 0 3px 10px rgba(0, 0, 0, 0.03);
+            --shadow-canopy: 0 16px 38px -8px rgba(75, 97, 44, 0.14), 0 3px 10px rgba(0, 0, 0, 0.03);
+            --shadow-glow-green: 0 14px 34px -8px rgba(121, 161, 60, 0.35);
+            --shadow-glow-deep: 0 14px 34px -8px rgba(75, 97, 44, 0.35);
+            --shadow-glow-blue: 0 14px 34px -8px rgba(56, 132, 197, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            background-color: var(--color-chalk-bg);
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--color-text-body);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 16px 64px;
+            overflow-x: hidden;
+            position: relative;
+            background-color: var(--color-chalk-bg);
+        }
+
+        /* ==========================================================================
+           2. FONDO BOTÁNICO FRESCO + PATRÓN CINEMATOGRÁFICO DE HOJAS Y BROTES
+           ========================================================================== */
+        .sunset-ambient-stage {
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+            background:
+                /* Trama de brotes y destellos botánicos */
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68' viewBox='0 0 68 68'%3E%3Cpath d='M34 14 C34 14 24 28 24 38 C24 44.5 28.5 49 34 49 C39.5 49 44 44.5 44 38 C44 28 34 14 34 14 Z' fill='%2379A13C' fill-opacity='0.12' stroke='%234B612C' stroke-width='1.2' stroke-opacity='0.25'/%3E%3Cpath d='M34 26 C34 26 29 34 29 39 C29 41.8 31.2 44 34 44 C36.8 44 39 41.8 39 39 C39 34 34 26 34 26 Z' fill='%234B612C' fill-opacity='0.10'/%3E%3Cpath d='M8 8 L10 14 L16 16 L10 18 L8 24 L6 18 L0 16 L6 14 Z' fill='%2379A13C' fill-opacity='0.22'/%3E%3Cpath d='M60 52 L61.5 56.5 L66 58 L61.5 59.5 L60 64 L58.5 59.5 L54 58 L58.5 56.5 Z' fill='%233884C5' fill-opacity='0.22'/%3E%3Ccircle cx='60' cy='12' r='2.5' fill='%233884C5' fill-opacity='0.25'/%3E%3Ccircle cx='8' cy='56' r='2.2' fill='%2379A13C' fill-opacity='0.25'/%3E%3C/svg%3E"),
+                linear-gradient(180deg, #FFFFFF 0%, #F9FBF6 28%, #F2F7EC 65%, #E9F1E0 100%);
+            background-size: 68px 68px, 100% 100%;
+            background-repeat: repeat, no-repeat;
+            animation: smoothFilmDrift 38s linear infinite;
+        }
+
+        @keyframes smoothFilmDrift {
+            0% {
+                background-position: 0px 0, 0 0;
+            }
+            100% {
+                background-position: 680px 0, 0 0;
+            }
+        }
+
+        .sun-flare-veil {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            max-width: 600px;
+            height: 240px;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.95) 0%, rgba(238, 246, 230, 0.3) 60%, transparent 100%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* ==========================================================================
+           3. ESTANDARTE OVOIDE BLANCO CORTO: ALOJA ÚNICAMENTE AL LOGO
+           ========================================================================== */
+        .logo-white-canopy {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(580px, 108vw);
+            height: 154px;
+            background: var(--color-bone-pure);
+            border-radius: 0 0 50% 50% / 0 0 100% 100%;
+            box-shadow: var(--shadow-canopy);
+            border-bottom: 2px solid rgba(121, 161, 60, 0.28);
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-white-canopy::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 180px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(121, 161, 60, 0.4), transparent);
+        }
+
+        /* ==========================================================================
+           4. SHELL PRINCIPAL MOBILE-FIRST
+           ========================================================================== */
+        .master-hub-shell {
+            width: 100%;
+            max-width: 485px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            z-index: 10;
+            position: relative;
+            padding-top: 22px;
+        }
+
+        /* ==========================================================================
+           5. HERO LOGO SUELTO ADELANTE DEL ÓVALO + TEXTO EDITORIAL
+           ========================================================================== */
+        .hero-logo-monument {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 4px 6px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .logo-free-stage {
+            width: 100%;
+            max-width: 250px;
+            height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            filter: drop-shadow(0 4px 10px rgba(75, 97, 44, 0.15));
+            animation: slowVitalityFloat 7.5s ease-in-out infinite alternate;
+            margin: 4px auto 0;
+        }
+
+        @keyframes slowVitalityFloat {
+            0%   { transform: translateY(0px) scale(1); }
+            50%  { transform: translateY(-3px) scale(1.015); filter: drop-shadow(0 8px 18px rgba(75, 97, 44, 0.22)); }
+            100% { transform: translateY(0px) scale(1); }
+        }
+
+        .brand-svg-raw {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+        .hero-text-block {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 48px;
+        }
+
+        .brand-motto-headline {
+            font-family: var(--font-display);
+            font-size: clamp(1.42rem, 5vw, 1.72rem);
+            font-weight: 700;
+            font-style: italic;
+            color: var(--color-text-dark);
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-lead-caption {
+            font-family: var(--font-sans);
+            font-size: 0.90rem;
+            line-height: 1.48;
+            color: var(--color-text-body);
+            max-width: 92%;
+            margin-top: 7px;
+            font-weight: 500;
+        }
+
+        .brand-lead-caption strong {
+            color: var(--color-palta-deep);
+            font-weight: 800;
+        }
+
+        .badges-capsule-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 14px;
+        }
+
+        .pill-badge-seal {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(121, 161, 60, 0.32);
+            border-radius: 999px;
+            padding: 5px 13px;
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+            box-shadow: 0 4px 12px rgba(75, 97, 44, 0.05);
+            letter-spacing: 0.02em;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* ==========================================================================
+           6. HERO CARD WHATSAPP CON ACCESO DIRECTO AL MENÚ
+           ========================================================================== */
+        .card-whatsapp-portal {
+            background: #FFFFFF;
+            border: 2px solid #25D366;
+            border-radius: 28px 16px 28px 16px;
+            padding: 22px 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            text-decoration: none;
+            color: var(--color-text-dark);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.20);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .card-whatsapp-portal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -120%;
+            width: 70%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.75), transparent);
+            transform: skewX(-22deg);
+            animation: delicateSheen 6.5s infinite ease-in-out;
+        }
+
+        @keyframes delicateSheen {
+            0%, 50% { left: -120%; }
+            80%, 100% { left: 160%; }
+        }
+
+        .card-whatsapp-portal:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 0 18px 42px rgba(37, 211, 102, 0.30);
+        }
+
+        .hero-left-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .hero-live-beacon {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #1FAF53;
+        }
+
+        .pulse-core {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #25D366;
+            box-shadow: 0 0 10px #25D366;
+            animation: pulseGlow 1.8s infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%      { opacity: 0.4; transform: scale(0.8); }
+        }
+
+        .hero-action-title {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 900;
+            line-height: 1.15;
+            color: var(--color-text-dark);
+            letter-spacing: -0.01em;
+        }
+
+        .hero-action-caption {
+            font-size: 0.84rem;
+            color: var(--color-text-muted);
+            font-weight: 600;
+        }
+
+        .whatsapp-bubble-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: #25D366;
+            color: #FFFFFF;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.40);
+            transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .card-whatsapp-portal:hover .whatsapp-bubble-btn {
+            transform: scale(1.12) rotate(12deg);
+        }
+
+        .whatsapp-bubble-btn svg {
+            width: 26px;
+            height: 26px;
+            fill: #FFFFFF;
+        }
+
+        /* ==========================================================================
+           7. GRILLA BENTO CON COLORIMETRÍA ARMONIZADA DE PALTA
+           ========================================================================== */
+        .morph-bento-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .bento-cell {
+            padding: 20px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 150px;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+        }
+
+        .bento-cell:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 1. CELDA VERDE PALTA VIBRANTE (#79A13C) */
+        .cell-palta-green {
+            background: var(--color-palta-green);
+            color: #FFFFFF;
+            border-radius: 40px 18px 18px 18px;
+            border: 2px solid #6B8F34;
+            box-shadow: var(--shadow-glow-green);
+        }
+
+        .cell-palta-green .cell-tag { color: #E7F6D1; }
+        .cell-palta-green .cell-desc { color: #F4FBEB; }
+        .cell-palta-green .cell-arrow { color: #FFFFFF; }
+
+        /* 2. CELDA AZUL MEAL PLANS (#3884C5) */
+        .cell-palta-blue {
+            background: var(--color-palta-blue);
+            color: #FFFFFF;
+            border-radius: 18px 40px 18px 18px;
+            border: 2px solid #2C71AA;
+            box-shadow: var(--shadow-glow-blue);
+        }
+
+        .cell-palta-blue .cell-tag { color: #D5ECFD; }
+        .cell-palta-blue .cell-desc { color: #EDF7FE; }
+        .cell-palta-blue .cell-arrow { color: #FFFFFF; }
+
+        /* 3. CELDA VERDE BOSQUE PROFUNDO (#4B612C) */
+        .cell-palta-deep {
+            background: var(--color-palta-deep);
+            color: #FFFFFF;
+            border-radius: 18px 18px 18px 40px;
+            border: 2px solid #3F5224;
+            box-shadow: var(--shadow-glow-deep);
+        }
+
+        .cell-palta-deep .cell-tag { color: #D7E7BF; }
+        .cell-palta-deep .cell-desc { color: #EBF3DC; }
+        .cell-palta-deep .cell-arrow { color: #FFFFFF; }
+
+        /* 4. CELDA BLANCA BOTÁNICA / TIENDA ONLINE */
+        .cell-white-card {
+            background: #FFFFFF;
+            color: var(--color-text-dark);
+            border-radius: 18px 18px 40px 18px;
+            border: 2px solid rgba(121, 161, 60, 0.35);
+            box-shadow: var(--shadow-float);
+        }
+
+        .cell-white-card .cell-tag { color: var(--color-palta-green); }
+        .cell-white-card .cell-desc { color: var(--color-text-muted); }
+        .cell-white-card .cell-arrow { color: var(--color-palta-deep); }
+
+        /* 5. CELDA RECTANGULAR COMPLETA: CÓMO PEDIR EN 3 PASOS */
+        .cell-wide-card {
+            grid-column: span 2;
+            min-height: auto;
+            flex-direction: row;
+            align-items: center;
+            background: #FFFFFF;
+            border: 2px solid rgba(121, 161, 60, 0.35);
+            border-left: 6px solid var(--color-palta-green);
+            border-radius: 22px;
+            padding: 18px 20px;
+            box-shadow: var(--shadow-float);
+            color: var(--color-text-dark);
+        }
+
+        .cell-wide-card:hover {
+            border-color: var(--color-palta-green);
+        }
+
+        .cell-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cell-tag {
+            font-family: var(--font-mono);
+            font-size: 0.66rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .cell-arrow {
+            font-family: var(--font-mono);
+            font-size: 1.15rem;
+            font-weight: 800;
+            transition: transform 0.25s ease;
+        }
+
+        .bento-cell:hover .cell-arrow {
+            transform: translate(4px, -4px);
+        }
+
+        .cell-title {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+
+        .cell-desc {
+            font-size: 0.78rem;
+            margin-top: 4px;
+            line-height: 1.38;
+            font-weight: 500;
+        }
+
+        /* ==========================================================================
+           8. SHOWCASE HORIZONTAL DE VIANDAS Y PACKS
+           ========================================================================== */
+        .showcase-flow-box {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .showcase-nav-row {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 0 4px;
+        }
+
+        .showcase-heading {
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+        }
+
+        .showcase-cta {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: var(--color-palta-deep);
+            letter-spacing: 0.08em;
+        }
+
+        .dishes-snap-slider {
+            display: flex;
+            gap: 13px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding: 4px 2px 14px;
+            scrollbar-width: none;
+        }
+
+        .dishes-snap-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .product-porcelain-card {
+            flex: 0 0 205px;
+            scroll-snap-align: start;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(121, 161, 60, 0.28);
+            border-radius: 20px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--color-text-dark);
+            box-shadow: var(--shadow-float);
+            transition: all 0.28s ease;
+        }
+
+        .product-porcelain-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-palta-green);
+        }
+
+        .product-frame-img {
+            width: 100%;
+            height: 145px;
+            border-radius: 14px;
+            overflow: hidden;
+            background: #F1F6EA;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-frame-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .product-porcelain-card:hover .product-frame-img img {
+            transform: scale(1.08);
+        }
+
+        .product-badge-corner {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            font-family: var(--font-mono);
+            font-size: 0.58rem;
+            font-weight: 800;
+            padding: 3px 8px;
+            border-radius: 999px;
+            background: var(--color-palta-deep);
+            color: #FFFFFF;
+            letter-spacing: 0.04em;
+        }
+
+        .product-name-label {
+            font-family: var(--font-sans);
+            font-size: 0.88rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+            line-height: 1.25;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .product-price-label {
+            font-family: var(--font-mono);
+            font-size: 0.98rem;
+            font-weight: 800;
+            color: var(--color-palta-deep);
+            margin-top: 2px;
+        }
+
+        /* ==========================================================================
+           9. VIRALES DE REDES & REELS
+           ========================================================================== */
+        .virals-dark-pod {
+            background: var(--color-palta-deep);
+            color: #FAFBF7;
+            border-radius: 28px;
+            padding: 22px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            box-shadow: 0 16px 44px rgba(44, 58, 26, 0.28);
+        }
+
+        .virals-header-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .virals-main-title {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #FFFFFF;
+        }
+
+        .virals-bubble-tag {
+            font-family: var(--font-mono);
+            font-size: 0.66rem;
+            font-weight: 800;
+            padding: 3px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+        }
+
+        .virals-track-scroll {
+            display: flex;
+            gap: 11px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+
+        .virals-track-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .viral-story-tile {
+            flex: 0 0 125px;
+            height: 175px;
+            scroll-snap-align: start;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            background: #394B22;
+            text-decoration: none;
+            color: #FFFFFF;
+            transition: transform 0.25s ease;
+        }
+
+        .viral-story-tile:hover {
+            transform: scale(1.05);
+        }
+
+        .viral-story-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.85);
+        }
+
+        .play-ring-icon {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .play-ring-icon svg {
+            width: 13px;
+            height: 13px;
+            fill: #FFFFFF;
+            margin-left: 2px;
+        }
+
+        .tile-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 6px 4px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ==========================================================================
+           10. TARJETA ENVIOS & BENEFICIOS DE PALTA
+           ========================================================================== */
+        .info-enclosure-pod {
+            background: #FFFFFF;
+            border: 1.5px solid rgba(121, 161, 60, 0.35);
+            border-radius: 22px;
+            padding: 18px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            box-shadow: var(--shadow-float);
+        }
+
+        .pod-head-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .pod-title-text {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+        }
+
+        .pod-items-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 9px;
+        }
+
+        .check-item-line {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--color-text-body);
+        }
+
+        .bullet-sun {
+            color: var(--color-palta-green);
+            font-weight: 800;
+            font-size: 0.95rem;
+            line-height: 1;
+        }
+
+        /* ==========================================================================
+           11. FOOTER NOBLE
+           ========================================================================== */
+        .hub-noble-footer {
+            margin-top: 10px;
+            padding-top: 22px;
+            border-top: 1.5px dashed rgba(121, 161, 60, 0.35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 8px;
+        }
+
+        .footer-brand-monument {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: var(--color-text-dark);
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 16px;
+            font-size: 0.78rem;
+            font-weight: 700;
+        }
+
+        .footer-social-links a {
+            color: var(--color-palta-deep);
+            text-decoration: none;
+        }
+
+        .footer-address-caption {
+            font-size: 0.74rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            max-width: 380px;
+        }
+
+        .footer-legal-copy {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            color: var(--color-text-muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.85;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FONDO EN TONO BOTÁNICO LUMINOSO + PATRÓN CINEMÁTICO SUAVE CON DESPLAZAMIENTO A LA DERECHA -->
+    <div class="sunset-ambient-stage" aria-hidden="true"></div>
+
+    <!-- DESTELLO DE LUZ SUPERIOR -->
+    <div class="sun-flare-veil" aria-hidden="true"></div>
+
+    <!-- ESTANDARTE OVOIDE BLANCO CORTO: ALOJA ÚNICAMENTE AL LOGO -->
+    <div class="logo-white-canopy" aria-hidden="true"></div>
+
+    <!-- ENVOLVENTE MÓVIL PRINCIPAL -->
+    <main class="master-hub-shell">
+
+        <!-- 1. CABECERA: LOGO SUELTO ADELANTE DEL ÓVALO + FRASE SIMÉTRICA DEBAJO -->
+        <header class="hero-logo-monument">
+            
+            <div class="logo-free-stage" onclick="playHaptic()">
+                <svg id="Layer_1" data-name="Layer 1" class="brand-svg-raw" xmlns="http://www.w3.org/2000/svg" viewBox="90 120 320 230">
+                    <defs>
+                        <style>
+                            .cls-1 { fill: #79a13c; stroke-width: 0px; }
+                            .cls-3 { fill: #4b612c; font-family: 'Fraunces', Georgia, serif; font-size: 110.36px; font-weight: 700; }
+                            .cls-4 { fill: #3884c5; font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 26.77px; font-weight: 800; letter-spacing: .06em; }
+                        </style>
+                    </defs>
+                    <!-- Logotipo Oficial Vectorial Palta Meal Plans -->
+                    <text class="cls-3" transform="translate(131.98 264.93)"><tspan x="0" y="0">Palta</tspan></text>
+                    <text class="cls-4" transform="translate(157.4 303.99)"><tspan x="0" y="0" xml:space="preserve">MEAL  PLANS</tspan></text>
+                    <path class="cls-1" d="M363.08,320.63c-3.54,2.93-7.57,5.72-12.04,8.33h-202.08c-4.47-2.61-8.5-5.4-12.04-8.33h226.16Z"/>
+                    <path class="cls-1" d="M174.44,178.64c3.78-4.82,8.05-8.85,13.35-11.75,4.69-2.56,9.62-3.73,14.91-2.62,6.95,1.45,11.99,7.45,10.23,14.28-5.89-4.62-12.32-7.66-19.97-7.34,11.65,1.49,19.79,7.84,25.31,18.42,2.43-15.82,9.94-28.01,23.6-36.18-5.08,1.93-9.36,5.02-13.23,8.77-3.86,3.73-6.86,8.1-9.55,12.92-2.66-3.53-3.55-7.31-2.86-11.37,1.5-8.72,7.05-14.09,14.97-17.22,7.98-3.14,16.12-2.59,24.23-.46,5.06,1.33,9.84,3.38,14.46,5.82.49.26.99.5,1.48,1.1-2.95-.1-5.75,0-8.47.78-4.12,1.19-6.89,3.98-8.94,7.61-2.46,4.33-4.35,8.95-6.89,13.25-4.44,7.53-12.43,9.13-19.78,6.31-1.16-.44-2.26-1.03-3.34-1.64-.86-.48-1.21-.38-1.5.63-1.14,3.95-1.68,7.99-1.81,12.08-.13,4.09.03,8.17.47,12.24.06.57.4,1.32-.36,1.68-.84.39-1.78.48-2.65.1-.86-.38-.47-1.16-.44-1.8.2-4.13.67-8.29-.55-12.34-1.02-3.4-2.77-6.43-4.97-9.21-.5-.63-.74-.76-1.41.09-2.39,3-5.3,5.25-9.4,5.34-2.59.06-4.75-.98-6.69-2.53-2.56-2.05-5.02-4.24-7.57-6.31-3.37-2.73-7.07-2.66-10.89-1.11-.51.21-.98.55-1.76.48Z"/>
+                </svg>
+            </div>
+
+            <div class="hero-text-block">
+                <h1 class="brand-motto-headline">Organizá tu semana y comé rico sin complicarte.</h1>
+
+                <p class="brand-lead-caption">
+                    Comida casera lista para tu semana. <strong>Resolvé tu semana en minutos</strong> con porciones balanceadas y listas para disfrutar.
+                </p>
+
+                <div class="badges-capsule-row">
+                    <span class="pill-badge-seal">🥗 100% Fresco</span>
+                    <span class="pill-badge-seal">❄️ Aptas Freezer y Microondas</span>
+                    <span class="pill-badge-seal">🥦 Calidad Casera</span>
+                    <span class="pill-badge-seal">🚚 Envíos en CABA</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 2. HERO CARD WHATSAPP DIRECTO -->
+        <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20%F0%9F%A5%91%20Quisiera%20pedir%20el%20men%C3%BA%20de%20viandas%20y%20organizar%20mi%20semana." target="_blank" rel="noopener noreferrer" class="card-whatsapp-portal" onclick="playHaptic()">
+            <div class="hero-left-meta">
+                <span class="hero-live-beacon"><i class="pulse-core"></i> Atención Directa WhatsApp</span>
+                <h2 class="hero-action-title">Pedí tus Viandas acá</h2>
+                <span class="hero-action-caption">Envío bonificado en CABA · Pagás por transferencia</span>
+            </div>
+            <div class="whatsapp-bubble-btn">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </div>
+        </a>
+
+        <!-- 3. GRILLA BENTO MORFOLÓGICA CON COLORES DE PALTA -->
+        <section class="morph-bento-grid">
+
+            <!-- 1. CELDA VERDE PALTA (#79A13C) - VIANDAS ADULTOS -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20los%20Packs%20de%20Viandas%20Saludables." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-green" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">01 · ADULTOS</span>
+                    <span class="cell-arrow">↗</span>
+                </div>
+                <div>
+                    <h3 class="cell-title">Packs Viandas</h3>
+                    <p class="cell-desc">Packs de 6 y 12 viandas caseras, balanceadas y listas.</p>
+                </div>
+            </a>
+
+            <!-- 2. CELDA AZUL MEAL PLANS (#3884C5) - LÍNEA ESCOLAR JUNIOR -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20las%20Viandas%20Escolares%20Junior." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-blue" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">02 · JUNIOR</span>
+                    <span class="cell-arrow">↗</span>
+                </div>
+                <div>
+                    <h3 class="cell-title">Línea Escolar</h3>
+                    <p class="cell-desc">Almuerzos saludables para chicos, ricos y nutritivos.</p>
+                </div>
+            </a>
+
+            <!-- 3. CELDA VERDE BOSQUE (#4B612C) - MERCADO LIBRE / COMPRA DIRECTA -->
+            <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-deep" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">03 · COMPRA</span>
+                    <span class="cell-arrow">↗</span>
+                </div>
+                <div>
+                    <h3 class="cell-title">Mercado Libre</h3>
+                    <p class="cell-desc">Packs disponibles con entrega y medios de pago integrados.</p>
+                </div>
+            </a>
+
+            <!-- 4. CELDA BLANCA BOTÁNICA - TIENDA ONLINE OFICIAL -->
+            <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer" class="bento-cell cell-white-card" onclick="playHaptic()">
+                <div class="cell-top-bar">
+                    <span class="cell-tag">04 · TIENDA</span>
+                    <span class="cell-arrow">↗</span>
+                </div>
+                <div>
+                    <h3 class="cell-title">Tienda Online</h3>
+                    <p class="cell-desc">Conocé nuestra web en Tiendanube con todo el menú.</p>
+                </div>
+            </a>
+
+            <!-- 5. CELDA RECTANGULAR COMPLETA: CÓMO COMPRAR EN 3 PASOS -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20men%C3%BA%20de%20esta%20semana." target="_blank" rel="noopener noreferrer" class="bento-cell cell-wide-card" onclick="playHaptic()">
+                <div style="flex:1;">
+                    <div class="cell-top-bar" style="margin-bottom: 2px;">
+                        <span class="cell-tag" style="color: var(--color-palta-deep);">¿CÓMO COMPRAR? · 3 PASOS SIMPLES</span>
+                    </div>
+                    <h3 class="cell-title">1. Pedís → 2. Pagás → 3. Recibís</h3>
+                    <p class="cell-desc" style="color: var(--color-text-muted);">Elegís tus viandas, pagás por transferencia y recibís en tu casa.</p>
+                </div>
+                <span class="cell-arrow" style="color: var(--color-palta-deep); font-size: 1.35rem;">↗</span>
+            </a>
+
+        </section>
+
+        <!-- 4. SHOWCASE DE PRODUCTOS Y PACKS -->
+        <section class="showcase-flow-box">
+            <div class="showcase-nav-row">
+                <span class="showcase-heading">Packs Más Elegidos</span>
+                <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="showcase-cta">Ver Todos →</a>
+            </div>
+
+            <div class="dishes-snap-slider">
+
+                <!-- PRODUCTO 1: PACK 6 VIANDAS SALUDABLES -->
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%206%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                    <div class="product-frame-img">
+                        <span class="product-badge-corner" style="background: var(--color-palta-green);">MÁS PEDIDO</span>
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=480&q=80" alt="Pack 6 Viandas Saludables" loading="lazy">
+                    </div>
+                    <span class="product-name-label">Viandas Saludables Pack 6 Viandas</span>
+                    <span class="product-price-label">$63.600</span>
+                </a>
+
+                <!-- PRODUCTO 2: PACK 12 VIANDAS SALUDABLES -->
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%2012%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                    <div class="product-frame-img">
+                        <span class="product-badge-corner" style="background: var(--color-palta-deep);">QUINCENAL</span>
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=480&q=80" alt="Pack 12 Viandas Saludables" loading="lazy">
+                    </div>
+                    <span class="product-name-label">Viandas Saludables Pack 12 Viandas</span>
+                    <span class="product-price-label">$98.000</span>
+                </a>
+
+                <!-- PRODUCTO 3: VIANDAS ESCOLARES JUNIOR 6 -->
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%206%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                    <div class="product-frame-img">
+                        <span class="product-badge-corner" style="background: var(--color-palta-blue);">KIDS</span>
+                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 6" loading="lazy">
+                    </div>
+                    <span class="product-name-label">Viandas Escolares Junior Pack 6 Almuerzos</span>
+                    <span class="product-price-label">$39.000</span>
+                </a>
+
+                <!-- PRODUCTO 4: VIANDAS ESCOLARES JUNIOR 12 -->
+                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%2012%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card" onclick="playHaptic()">
+                    <div class="product-frame-img">
+                        <span class="product-badge-corner" style="background: var(--color-palta-blue-deep);">ESCOLAR</span>
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 12" loading="lazy">
+                    </div>
+                    <span class="product-name-label">Viandas Escolares Junior Pack 12 Almuerzos</span>
+                    <span class="product-price-label">$78.000</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- 5. VIRALES EN REDES DE PALTA -->
+        <section class="virals-dark-pod">
+            <div class="virals-header-line">
+                <span class="virals-main-title">En Nuestro Instagram</span>
+                <span class="virals-bubble-tag">@mealplanscaba</span>
+            </div>
+
+            <div class="virals-track-scroll">
+                <a href="https://www.instagram.com/reel/DdzDej3SLIe/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
+                    <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=240&q=80" alt="Semana ordenada">
+                    <div class="play-ring-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    </div>
+                    <div class="tile-caption">Semana Ordenada</div>
+                </a>
+
+                <a href="https://www.instagram.com/p/DQCl3UkjkYF/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=240&q=80" alt="Lasaña de berenjena">
+                    <div class="play-ring-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    </div>
+                    <div class="tile-caption">Lasaña de Berenjena</div>
+                </a>
+
+                <a href="https://www.instagram.com/mealplanscaba/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=240&q=80" alt="Real food for real people">
+                    <div class="play-ring-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    </div>
+                    <div class="tile-caption">Real Food</div>
+                </a>
+
+                <a href="https://www.instagram.com/reel/Dcgoa2HyZ8X/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
+                    <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=240&q=80" alt="Cómo Comprar">
+                    <div class="play-ring-icon">
+                        <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+                    </div>
+                    <div class="tile-caption">¿Cómo Comprar?</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. POD DE LOGÍSTICA & BENEFICIOS DE PALTA -->
+        <article class="info-enclosure-pod">
+            <div class="pod-head-bar">
+                <span class="pod-title-text">Envíos & Beneficios Palta</span>
+                <span class="pill-badge-seal" style="border-color: var(--color-palta-green);">CABA</span>
+            </div>
+            <div class="pod-items-stack">
+                <div class="check-item-line">
+                    <span class="bullet-sun">★</span>
+                    <span><strong>Envío bonificado en CABA:</strong> Recibí tus viandas frescas en la puerta de tu casa.</span>
+                </div>
+                <div class="check-item-line">
+                    <span class="bullet-sun">★</span>
+                    <span><strong>Aptas freezer y microondas:</strong> Comida casera lista en pocos minutos.</span>
+                </div>
+                <div class="check-item-line">
+                    <span class="bullet-sun">★</span>
+                    <span><strong>Ingredientes de calidad y porciones balanceadas:</strong> Vos elegís cómo combinar tus platos, nosotros nos encargamos del resto.</span>
+                </div>
+                <div class="check-item-line">
+                    <span class="bullet-sun">★</span>
+                    <span><strong>Pago simple por transferencia bancaria:</strong> Pedinos el menú y armá tu semana con Palta.</span>
+                </div>
+            </div>
+        </article>
+
+        <!-- 7. FOOTER NOBLE -->
+        <footer class="hub-noble-footer">
+            <div class="footer-brand-monument">PALTA MEAL PLANS</div>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/mealplanscaba/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <span>·</span>
+                <a href="https://web.facebook.com/people/Meal-Plans/61575672778497/#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <span>·</span>
+                <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer">Tiendanube</a>
+                <span>·</span>
+                <a href="https://wa.me/5491125617372" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </div>
+            <p class="footer-address-caption">
+                Buenos Aires · Ciudad Autónoma de Buenos Aires (CABA)<br>
+                Contacto directo: paltamealplans@gmail.com · Tel: 11 2561-7372
+            </p>
+            <p class="footer-legal-copy">© 2026 PALTA MEAL PLANS · COMIDA CASERA Y SALUDABLE</p>
+        </footer>
+
+    </main>
+
+    <!-- CONTROLADOR JS LIVIANO DE MICRO-INTERACCIONES -->
+    <script>
+        function playHaptic() {
+            if ('vibrate' in navigator) {
+                try { navigator.vibrate(10); } catch(e) {}
+            }
+        }
+
+        // FÍSICA MAGNÉTICA SUAVE
+        document.querySelectorAll('.bento-cell, .card-whatsapp-portal, .product-porcelain-card').forEach(elem => {
+            elem.addEventListener('mousemove', (e) => {
+                const rect = elem.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                elem.style.transform = `translate(${x * 0.02}px, ${y * 0.02 - 3}px)`;
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.style.transform = '';
+            });
+        });
+    </script>
+</body>
+</html>
