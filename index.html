@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Palta Meal Plans · Comida Casera y Saludable</title>
-    <meta name="description" content="Viandas caseras, saludables y listas en minutos. Packs semanales y escolares. Envíos en CABA.">
+    <meta name="description" content="Viandas caseras, saludables y listas en minutos. Packs semanales y mensuales. Envíos en CABA.">
     
     <meta name="theme-color" content="#F7F9F4">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -120,15 +120,14 @@
 
         /* ==========================================================================
            3. ESTANDARTE OVOIDE BLANCO: ENMARCADO EXACTO Y ARMONIOSO DEL LOGO
-           Redimensionado para abrazar al logo con máxima jerarquía y simetría
            ========================================================================== */
         .logo-white-canopy {
             position: absolute;
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: min(390px, 92vw);
-            height: 142px;
+            width: min(350px, 88vw);
+            height: clamp(118px, 25vw, 132px);
             background: var(--color-bone-pure);
             border-radius: 0 0 50% 50% / 0 0 100% 100%;
             box-shadow: var(--shadow-canopy);
@@ -143,7 +142,7 @@
             bottom: 4px;
             left: 50%;
             transform: translateX(-50%);
-            width: 140px;
+            width: 120px;
             height: 2px;
             background: linear-gradient(90deg, transparent, rgba(121, 161, 60, 0.45), transparent);
         }
@@ -164,7 +163,7 @@
         }
 
         /* ==========================================================================
-           5. HERO LOGO CON MÁXIMA JERARQUÍA Y PESO VISUAL
+           5. HERO LOGO CON TAMAÑO EQUILIBRADO Y PERFECTO RESPONSIVE
            ========================================================================== */
         .hero-logo-monument {
             width: 100%;
@@ -179,21 +178,21 @@
 
         .logo-free-stage {
             width: 100%;
-            max-width: min(295px, 80vw);
-            height: 114px;
+            max-width: min(180px, 48vw);
+            height: clamp(74px, 20vw, 88px);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             cursor: pointer;
-            filter: drop-shadow(0 6px 14px rgba(75, 97, 44, 0.22));
+            filter: drop-shadow(0 5px 12px rgba(75, 97, 44, 0.18));
             animation: slowVitalityFloat 7.5s ease-in-out infinite alternate;
-            margin: 0 auto;
+            margin: 6px auto 0;
         }
 
         @keyframes slowVitalityFloat {
             0%   { transform: translateY(0px) scale(1); }
-            50%  { transform: translateY(-3px) scale(1.02); filter: drop-shadow(0 10px 22px rgba(75, 97, 44, 0.28)); }
+            50%  { transform: translateY(-3px) scale(1.02); filter: drop-shadow(0 8px 18px rgba(75, 97, 44, 0.24)); }
             100% { transform: translateY(0px) scale(1); }
         }
 
@@ -209,7 +208,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-top: 26px;
+            margin-top: 18px;
         }
 
         .brand-motto-headline {
@@ -408,7 +407,7 @@
             transform: translateY(-5px);
         }
 
-        /* 1. CELDA VERDE PALTA VIBRANTE (#79A13C) */
+        /* 1. CELDA VERDE PALTA VIBRANTE (#79A13C) - PACK ADULTOS */
         .cell-palta-green {
             background: var(--color-palta-green);
             color: #FFFFFF;
@@ -421,7 +420,7 @@
         .cell-palta-green .cell-desc { color: #F4FBEB; }
         .cell-palta-green .cell-arrow { color: #FFFFFF; }
 
-        /* 2. CELDA AZUL MEAL PLANS (#3884C5) */
+        /* 2. CELDA AZUL MEAL PLANS (#3884C5) - VER MENÚ SEMANAL */
         .cell-palta-blue {
             background: var(--color-palta-blue);
             color: #FFFFFF;
@@ -447,7 +446,7 @@
         .cell-palta-deep .cell-desc { color: #EBF3DC; }
         .cell-palta-deep .cell-arrow { color: #FFFFFF; }
 
-        /* 4. CELDA BLANCA BOTÁNICA / TIENDA ONLINE */
+        /* 4. CELDA BLANCA BOTÁNICA - PROMO MAYORISTA 10% OFF */
         .cell-white-card {
             background: #FFFFFF;
             color: var(--color-text-dark);
@@ -570,7 +569,7 @@
         }
 
         .product-porcelain-card {
-            flex: 0 0 clamp(180px, 58vw, 205px);
+            flex: 0 0 clamp(185px, 60vw, 215px);
             scroll-snap-align: start;
             background: #FFFFFF;
             border: 1.5px solid rgba(121, 161, 60, 0.28);
@@ -720,7 +719,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: brightness(0.85);
+            filter: brightness(0.88);
         }
 
         .play-ring-icon {
@@ -834,7 +833,6 @@
             word-break: break-word;
         }
 
-        /* FILA DE ICONOS OFICIALES DE REDES */
         .footer-social-icons-row {
             display: flex;
             justify-content: center;
@@ -906,24 +904,40 @@
     <!-- ENVOLVENTE MÓVIL PRINCIPAL -->
     <main class="master-hub-shell">
 
-        <!-- 1. CABECERA: LOGO SUELTO ADELANTE DEL ÓVALO CON MÁXIMA JERARQUÍA -->
+        <!-- 1. CABECERA: LOGO NUEVO VECTORIAL EN TAMAÑO PERFECTO Y ARMÓNICO -->
         <header class="hero-logo-monument">
             
             <div class="logo-free-stage">
-                <!-- ViewBox optimizado al contorno exacto para darle escala y peso sin márgenes residuales -->
-                <svg id="Layer_1" data-name="Layer 1" class="brand-svg-raw" xmlns="http://www.w3.org/2000/svg" viewBox="120 115 250 218">
-                    <defs>
-                        <style>
-                            .cls-1 { fill: #79a13c; stroke-width: 0px; }
-                            .cls-3 { fill: #4b612c; font-family: 'Fraunces', Georgia, serif; font-size: 110.36px; font-weight: 700; }
-                            .cls-4 { fill: #3884c5; font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 26.77px; font-weight: 800; letter-spacing: .06em; }
-                        </style>
-                    </defs>
-                    <!-- Logotipo Oficial Vectorial Palta Meal Plans -->
-                    <text class="cls-3" transform="translate(131.98 264.93)"><tspan x="0" y="0">Palta</tspan></text>
-                    <text class="cls-4" transform="translate(157.4 303.99)"><tspan x="0" y="0" xml:space="preserve">MEAL  PLANS</tspan></text>
-                    <path class="cls-1" d="M363.08,320.63c-3.54,2.93-7.57,5.72-12.04,8.33h-202.08c-4.47-2.61-8.5-5.4-12.04-8.33h226.16Z"/>
-                    <path class="cls-1" d="M174.44,178.64c3.78-4.82,8.05-8.85,13.35-11.75,4.69-2.56,9.62-3.73,14.91-2.62,6.95,1.45,11.99,7.45,10.23,14.28-5.89-4.62-12.32-7.66-19.97-7.34,11.65,1.49,19.79,7.84,25.31,18.42,2.43-15.82,9.94-28.01,23.6-36.18-5.08,1.93-9.36,5.02-13.23,8.77-3.86,3.73-6.86,8.1-9.55,12.92-2.66-3.53-3.55-7.31-2.86-11.37,1.5-8.72,7.05-14.09,14.97-17.22,7.98-3.14,16.12-2.59,24.23-.46,5.06,1.33,9.84,3.38,14.46,5.82.49.26.99.5,1.48,1.1-2.95-.1-5.75,0-8.47.78-4.12,1.19-6.89,3.98-8.94,7.61-2.46,4.33-4.35,8.95-6.89,13.25-4.44,7.53-12.43,9.13-19.78,6.31-1.16-.44-2.26-1.03-3.34-1.64-.86-.48-1.21-.38-1.5.63-1.14,3.95-1.68,7.99-1.81,12.08-.13,4.09.03,8.17.47,12.24.06.57.4,1.32-.36,1.68-.84.39-1.78.48-2.65.1-.86-.38-.47-1.16-.44-1.8.2-4.13.67-8.29-.55-12.34-1.02-3.4-2.77-6.43-4.97-9.21-.5-.63-.74-.76-1.41.09-2.39,3-5.3,5.25-9.4,5.34-2.59.06-4.75-.98-6.69-2.53-2.56-2.05-5.02-4.24-7.57-6.31-3.37-2.73-7.07-2.66-10.89-1.11-.51.21-.98.55-1.76.48Z"/>
+                <!-- SVG Oficial Nuevo Palta Meal Plans -->
+                <svg id="Layer_1" data-name="Layer 1" class="brand-svg-raw" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 226.16 113.43">
+                  <defs>
+                    <style>
+                      .cls-1 {
+                        fill: #79a13c;
+                      }
+
+                      .cls-1, .cls-2 {
+                        stroke-width: 0px;
+                      }
+
+                      .cls-2 {
+                        fill: #3884c5;
+                      }
+                    </style>
+                  </defs>
+                  <g>
+                    <path class="cls-2" d="M22.46,88.45l.08-18.68c.66-.12,1.53-.19,2.6-.19.62,0,1.16.14,1.64.42.48.28.96.88,1.46,1.8l5.09,9.15,5.94-11.09c.86-.19,1.61-.28,2.24-.28.86,0,1.46.14,1.81.43.35.29.52.8.52,1.55v16.89h-3.4v-14.19l-5.62,10.09h-3.06s-5.89-10.09-5.89-10.09v14.19h-3.4Z"/>
+                    <path class="cls-2" d="M49.41,69.72h12.53c-.14,1.04-.47,2.06-.99,3.08-2-.2-4.17-.29-6.5-.29h-1.45v4.95h6.32c-.2,1.12-.5,2.13-.91,3.03-.96-.12-1.87-.2-2.73-.21l-2.68-.03v5.43h1.29c2.03,0,3.49-.02,4.36-.07.87-.04,2-.18,3.37-.42-.05.66-.17,1.31-.33,1.94-.17.63-.35,1.08-.55,1.33h-11.72v-18.74Z"/>
+                    <path class="cls-2" d="M77.84,88.45l-1.28-4.04h-7.15l-1.15,4.04h-3.53l5.78-18.6c.71-.18,1.5-.27,2.36-.27,1.46,0,2.34.41,2.62,1.23l6.02,17.64h-3.67ZM72.83,72.61l-2.57,8.91h5.38l-2.81-8.91Z"/>
+                    <path class="cls-2" d="M85.17,88.45v-18.68c.48-.12,1.03-.19,1.63-.19.71,0,1.22.16,1.51.48s.44.88.44,1.69v13.71h1.53c1.91,0,3.3-.03,4.18-.08.87-.05,2.01-.2,3.4-.43-.18,1.8-.42,2.97-.72,3.51h-11.97Z"/>
+                    <path class="cls-2" d="M130.38,75.85c0,1.07-.19,2.07-.56,3s-1.04,1.91-1.98,2.94c-1.61.34-3.44.51-5.51.51h-2.76v6.16h-3.61v-18.26c1.5-.5,3.76-.75,6.77-.75,2.59,0,4.51.49,5.77,1.46,1.26.97,1.89,2.62,1.89,4.94ZM119.57,72.39v7.01h1.77c1.43,0,2.71-.08,3.85-.24,1-.79,1.5-1.92,1.5-3.4,0-1.34-.32-2.28-.95-2.82-.63-.54-1.64-.82-3.01-.82-1.02,0-2.07.09-3.16.27Z"/>
+                    <path class="cls-2" d="M134.77,88.45v-18.68c.48-.12,1.03-.19,1.63-.19.71,0,1.22.16,1.51.48.29.32.44.88.44,1.69v13.71h1.53c1.91,0,3.3-.03,4.18-.08.87-.05,2.01-.2,3.4-.43-.18,1.8-.42,2.97-.72,3.51h-11.96Z"/>
+                    <path class="cls-2" d="M162.69,88.45l-1.28-4.04h-7.15l-1.15,4.04h-3.53l5.78-18.6c.71-.18,1.5-.27,2.36-.27,1.46,0,2.34.41,2.62,1.23l6.02,17.64h-3.67ZM157.69,72.61l-2.57,8.91h5.38l-2.81-8.91Z"/>
+                    <path class="cls-2" d="M170.03,88.45l.03-18.68c.68-.12,1.47-.19,2.38-.19,1.4,0,2.56.71,3.48,2.11l5.75,8.17c.5.6.99,1.44,1.45,2.54-.14-.66-.21-1.65-.21-2.97v-9.66c.5-.12,1-.19,1.5-.19.62,0,1.07.14,1.33.42.26.28.39.76.39,1.46v17.13h-2.6l-8.81-13.04c-.46-.7-1.04-1.74-1.71-3.13.18.8.27,1.85.27,3.13v12.9h-3.24Z"/>
+                    <path class="cls-2" d="M196.61,80.05c-2.14-.2-3.59-.7-4.35-1.5-.76-.8-1.09-2.14-1-4.01.05-1.68.39-3.2,1.02-4.58,1.5-.34,3.5-.51,6-.51s4.43.13,6.02.4c-.04,1.11-.24,2.06-.62,2.86-1.46-.25-3.03-.38-4.71-.38-1.82,0-3.13.1-3.93.29-.25.61-.38,1.22-.4,1.85-.02.39,0,.73.05,1,.05.28.2.52.44.72s.45.37.63.48c.18.12.52.22,1.02.32.5.1.89.17,1.16.21.28.04.77.11,1.49.2,3.41.39,5.11,2.12,5.11,5.19,0,1.2-.11,2.31-.33,3.33-.22,1.03-.52,1.77-.9,2.24-1.64.36-3.68.54-6.1.54s-4.42-.21-6.08-.64c-.39-.79-.61-1.89-.64-3.32,2,.7,4.1,1.04,6.29,1.04,1.68,0,2.94-.1,3.8-.29.39-.73.59-1.64.59-2.73,0-.71-.38-1.31-1.14-1.78-.76-.47-1.9-.79-3.41-.95Z"/>
+                  </g>
+                  <path class="cls-1" d="M226.16,105.1c-3.54,2.93-7.57,5.72-12.04,8.33H12.04c-4.47-2.61-8.5-5.4-12.04-8.33h226.16Z"/>
+                  <path class="cls-1" d="M60.04,34.3c3.78-4.82,8.05-8.85,13.35-11.75,4.69-2.56,9.62-3.73,14.91-2.62,6.95,1.45,11.99,7.45,10.23,14.28-5.89-4.62-12.32-7.66-19.97-7.34,11.65,1.49,19.79,7.84,25.31,18.42,2.43-15.82,9.94-28.01,23.6-36.18-5.08,1.93-9.36,5.02-13.23,8.77-3.86,3.73-6.86,8.1-9.55,12.92-2.66-3.53-3.55-7.31-2.86-11.37,1.5-8.72,7.05-14.09,14.97-17.22,7.98-3.14,16.12-2.59,24.23-.46,5.06,1.33,9.84,3.38,14.46,5.82.49.26.99.5,1.48,1.1-2.95-.1-5.75,0-8.47.78-4.12,1.19-6.89,3.98-8.94,7.61-2.46,4.33-4.35,8.95-6.89,13.25-4.44,7.53-12.43,9.13-19.78,6.31-1.16-.44-2.26-1.03-3.34-1.64-.86-.48-1.21-.38-1.5.63-1.14,3.95-1.68,7.99-1.81,12.08-.13,4.09.03,8.17.47,12.24.06.57.4,1.32-.36,1.68-.84.39-1.78.48-2.65.1-.86-.38-.47-1.16-.44-1.8.2-4.13.67-8.29-.55-12.34-1.02-3.4-2.77-6.43-4.97-9.21-.5-.63-.74-.76-1.41.09-2.39,3-5.3,5.25-9.4,5.34-2.59.06-4.75-.98-6.69-2.53-2.56-2.05-5.02-4.24-7.57-6.31-3.37-2.73-7.07-2.66-10.89-1.11-.51.21-.98.55-1.76.48Z"/>
                 </svg>
             </div>
 
@@ -931,7 +945,7 @@
                 <h1 class="brand-motto-headline">Organizá tu semana y comé rico sin complicarte.</h1>
 
                 <p class="brand-lead-caption">
-                    Comida casera lista para tu semana. <strong>Resolvé tu semana en minutos</strong> con porciones balanceadas y listas para disfrutar.
+                    Comida casera lista para tu semana. <strong>Resolvé tus almuerzos y cenas</strong> con porciones balanceadas, nutritivas y listas para disfrutar.
                 </p>
 
                 <div class="badges-capsule-row">
@@ -943,7 +957,7 @@
             </div>
         </header>
 
-        <!-- 2. HERO CARD WHATSAPP DIRECTO (BOTÓN CON SONIDO WIN EXCLUSIVO) -->
+        <!-- 2. HERO CARD WHATSAPP DIRECTO -->
         <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20%F0%9F%A5%91%20Quisiera%20pedir%20el%20men%C3%BA%20de%20viandas%20y%20organizar%20mi%20semana." target="_blank" rel="noopener noreferrer" class="card-whatsapp-portal">
             <div class="hero-left-meta">
                 <span class="hero-live-beacon"><i class="pulse-core"></i> Atención Directa WhatsApp</span>
@@ -955,34 +969,34 @@
             </div>
         </a>
 
-        <!-- 3. GRILLA BENTO MORFOLÓGICA CON COLORES DE PALTA -->
+        <!-- 3. GRILLA BENTO CON COLORIMETRÍA ARMONIZADA DE PALTA -->
         <section class="morph-bento-grid">
 
-            <!-- 1. CELDA VERDE PALTA (#79A13C) - VIANDAS ADULTOS -->
-            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20los%20Packs%20de%20Viandas%20Saludables." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-green">
+            <!-- 1. CELDA VERDE PALTA (#79A13C) - PACK ADULTOS -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20armar%20mi%20Pack%20de%20Viandas%20(a%20partir%20de%206%20unidades)." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-green">
                 <div class="cell-top-bar">
                     <span class="cell-tag">01 · ADULTOS</span>
                     <span class="cell-arrow">↗</span>
                 </div>
                 <div>
-                    <h3 class="cell-title">Packs Viandas</h3>
-                    <p class="cell-desc">Packs de 6 y 12 viandas caseras, balanceadas y listas.</p>
+                    <h3 class="cell-title">Pack Adultos</h3>
+                    <p class="cell-desc">Armá tu pack a partir de 6 viandas caseras y listas.</p>
                 </div>
             </a>
 
-            <!-- 2. CELDA AZUL MEAL PLANS (#3884C5) - LÍNEA ESCOLAR JUNIOR -->
-            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20consultar%20por%20las%20Viandas%20Escolares%20Junior." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-blue">
+            <!-- 2. CELDA AZUL MEAL PLANS (#3884C5) - VER MENÚ SEMANAL -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20ver%20el%20men%C3%BA%20semanal%20disponible." target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-blue">
                 <div class="cell-top-bar">
-                    <span class="cell-tag">02 · JUNIOR</span>
+                    <span class="cell-tag">02 · MENÚ</span>
                     <span class="cell-arrow">↗</span>
                 </div>
                 <div>
-                    <h3 class="cell-title">Línea Escolar</h3>
-                    <p class="cell-desc">Almuerzos saludables para chicos, ricos y nutritivos.</p>
+                    <h3 class="cell-title">Menú Semanal</h3>
+                    <p class="cell-desc">Conocé la carta de platos frescos de esta semana.</p>
                 </div>
             </a>
 
-            <!-- 3. CELDA VERDE BOSQUE (#4B612C) - MERCADO LIBRE / COMPRA DIRECTA -->
+            <!-- 3. CELDA VERDE BOSQUE (#4B612C) - MERCADO LIBRE -->
             <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="bento-cell cell-palta-deep">
                 <div class="cell-top-bar">
                     <span class="cell-tag">03 · COMPRA</span>
@@ -994,15 +1008,15 @@
                 </div>
             </a>
 
-            <!-- 4. CELDA BLANCA BOTÁNICA - TIENDA ONLINE OFICIAL -->
-            <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer" class="bento-cell cell-white-card">
+            <!-- 4. CELDA BLANCA BOTÁNICA - PROMO MAYORISTA 10% OFF -->
+            <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20aprovechar%20el%2010%25%20de%20descuento%20en%20pedidos%20mayores%20a%2030%20viandas." target="_blank" rel="noopener noreferrer" class="bento-cell cell-white-card">
                 <div class="cell-top-bar">
-                    <span class="cell-tag">04 · TIENDA</span>
+                    <span class="cell-tag">04 · PROMO</span>
                     <span class="cell-arrow">↗</span>
                 </div>
                 <div>
-                    <h3 class="cell-title">Tienda Online</h3>
-                    <p class="cell-desc">Conocé nuestra web en Tiendanube con todo el menú.</p>
+                    <h3 class="cell-title">10% OFF +30</h3>
+                    <p class="cell-desc">Pagando por transferencia en pedidos mayores a 30 viandas.</p>
                 </div>
             </a>
 
@@ -1020,59 +1034,59 @@
 
         </section>
 
-        <!-- 4. SHOWCASE DE PRODUCTOS Y PACKS -->
+        <!-- 4. SHOWCASE DE PRODUCTOS Y PACKS CON FOTOS REALES Y PRECIOS ACTUALIZADOS -->
         <section class="showcase-flow-box">
             <div class="showcase-nav-row">
                 <span class="showcase-heading">Packs Más Elegidos</span>
-                <a href="https://linktr.ee/paltamealplans" target="_blank" rel="noopener noreferrer" class="showcase-cta">Ver Todos →</a>
+                <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quisiera%20ver%20todos%20los%20packs%20y%20el%20men%C3%BA%20disponible." target="_blank" rel="noopener noreferrer" class="showcase-cta">Pedir Menú →</a>
             </div>
 
             <div class="dishes-snap-slider">
 
-                <!-- PRODUCTO 1: PACK 6 VIANDAS SALUDABLES -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%206%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
+                <!-- PACK 1: 6 VIANDAS -->
+                <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20Pack%20de%206%20Viandas%20($63.600)" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
-                        <span class="product-badge-corner" style="background: var(--color-palta-green);">MÁS PEDIDO</span>
-                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=480&q=80" alt="Pack 6 Viandas Saludables" loading="lazy">
+                        <span class="product-badge-corner" style="background: var(--color-palta-green);">DESDE 6</span>
+                        <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.02.jpeg" alt="Pack 6 Viandas Caseras" loading="lazy">
                     </div>
-                    <span class="product-name-label">Viandas Saludables Pack 6 Viandas</span>
+                    <span class="product-name-label">Pack 6 Viandas Caseras</span>
                     <span class="product-price-label">$63.600</span>
                 </a>
 
-                <!-- PRODUCTO 2: PACK 12 VIANDAS SALUDABLES -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20de%2012%20Viandas%20Saludables" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
+                <!-- PACK 2: 12 VIANDAS -->
+                <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20Pack%20de%2012%20Viandas%20($127.200)" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
                         <span class="product-badge-corner" style="background: var(--color-palta-deep);">QUINCENAL</span>
-                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=480&q=80" alt="Pack 12 Viandas Saludables" loading="lazy">
+                        <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.03.jpeg" alt="Pack 12 Viandas Caseras" loading="lazy">
                     </div>
-                    <span class="product-name-label">Viandas Saludables Pack 12 Viandas</span>
-                    <span class="product-price-label">$98.000</span>
+                    <span class="product-name-label">Pack 12 Viandas Caseras</span>
+                    <span class="product-price-label">$127.200</span>
                 </a>
 
-                <!-- PRODUCTO 3: VIANDAS ESCOLARES JUNIOR 6 -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%206%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
+                <!-- PACK 3: 24 VIANDAS -->
+                <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20pedir%20el%20Pack%20de%2024%20Viandas%20($254.400)" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
-                        <span class="product-badge-corner" style="background: var(--color-palta-blue);">KIDS</span>
-                        <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 6" loading="lazy">
+                        <span class="product-badge-corner" style="background: var(--color-palta-blue);">MENSUAL</span>
+                        <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.04.jpeg" alt="Pack 24 Viandas Caseras" loading="lazy">
                     </div>
-                    <span class="product-name-label">Viandas Escolares Junior Pack 6 Almuerzos</span>
-                    <span class="product-price-label">$39.000</span>
+                    <span class="product-name-label">Pack 24 Viandas Caseras</span>
+                    <span class="product-price-label">$254.400</span>
                 </a>
 
-                <!-- PRODUCTO 4: VIANDAS ESCOLARES JUNIOR 12 -->
-                <a href="https://wa.me/5491125617372?text=Quiero%20el%20Pack%20Escolar%20de%2012%20Almuerzos" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
+                <!-- PACK 4: 30 VIANDAS CON 10% OFF -->
+                <a href="https://wa.me/5491125617372?text=%C2%A1Hola!%20Quiero%20el%20Pack%20de%2030%20Viandas%20con%20el%2010%25%20OFF%20por%20transferencia%20($286.200)" target="_blank" rel="noopener noreferrer" class="product-porcelain-card">
                     <div class="product-frame-img">
-                        <span class="product-badge-corner" style="background: var(--color-palta-blue-deep);">ESCOLAR</span>
-                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=480&q=80" alt="Viandas Escolares Junior Pack 12" loading="lazy">
+                        <span class="product-badge-corner" style="background: var(--color-warm-accent);">10% OFF TRANSF.</span>
+                        <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.03%20(1).jpeg" alt="Pack 30 Viandas Caseras" loading="lazy">
                     </div>
-                    <span class="product-name-label">Viandas Escolares Junior Pack 12 Almuerzos</span>
-                    <span class="product-price-label">$78.000</span>
+                    <span class="product-name-label">Pack 30 Viandas (+30 viandas)</span>
+                    <span class="product-price-label">$286.200</span>
                 </a>
 
             </div>
         </section>
 
-        <!-- 5. VIRALES EN REDES DE PALTA -->
+        <!-- 5. VIRALES EN REDES DE PALTA CON FOTOS REALES -->
         <section class="virals-dark-pod">
             <div class="virals-header-line">
                 <span class="virals-main-title">En Nuestro Instagram</span>
@@ -1081,7 +1095,7 @@
 
             <div class="virals-track-scroll">
                 <a href="https://www.instagram.com/reel/DdzDej3SLIe/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
-                    <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=240&q=80" alt="Semana ordenada">
+                    <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.03%20(2).jpeg" alt="Semana ordenada" loading="lazy">
                     <div class="play-ring-icon">
                         <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                     </div>
@@ -1089,15 +1103,15 @@
                 </a>
 
                 <a href="https://www.instagram.com/p/DQCl3UkjkYF/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
-                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=240&q=80" alt="Lasaña de berenjena">
+                    <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.03%20(3).jpeg" alt="Viandas Caseras" loading="lazy">
                     <div class="play-ring-icon">
                         <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                     </div>
-                    <div class="tile-caption">Lasaña de Berenjena</div>
+                    <div class="tile-caption">Comida Real</div>
                 </a>
 
                 <a href="https://www.instagram.com/mealplanscaba/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
-                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=240&q=80" alt="Real food for real people">
+                    <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.04%20(1).jpeg" alt="Real food for real people" loading="lazy">
                     <div class="play-ring-icon">
                         <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                     </div>
@@ -1105,11 +1119,11 @@
                 </a>
 
                 <a href="https://www.instagram.com/reel/Dcgoa2HyZ8X/" target="_blank" rel="noopener noreferrer" class="viral-story-tile">
-                    <img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=240&q=80" alt="Cómo Comprar">
+                    <img src="WhatsApp%20Image%202026-11-01%20at%2022.21.04%20(2).jpeg" alt="Cómo Comprar" loading="lazy">
                     <div class="play-ring-icon">
                         <svg viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></svg>
                     </div>
-                    <div class="tile-caption">¿Cómo Comprar?</div>
+                    <div class="tile-caption">¿Cómo Pedir?</div>
                 </a>
             </div>
         </section>
@@ -1123,24 +1137,24 @@
             <div class="pod-items-stack">
                 <div class="check-item-line">
                     <span class="bullet-sun">★</span>
-                    <span><strong>Envío bonificado en CABA:</strong> Recibí tus viandas frescas en la puerta de tu casa.</span>
+                    <span><strong>Armá tu pack desde 6 viandas:</strong> Vos elegís la cantidad exacta que necesitás para tu rutina.</span>
                 </div>
                 <div class="check-item-line">
                     <span class="bullet-sun">★</span>
-                    <span><strong>Aptas freezer y microondas:</strong> Comida casera lista en pocos minutos.</span>
+                    <span><strong>Envío bonificado en CABA:</strong> Recibí tus viandas caseras en la comodidad de tu casa.</span>
                 </div>
                 <div class="check-item-line">
                     <span class="bullet-sun">★</span>
-                    <span><strong>Ingredientes de calidad y porciones balanceadas:</strong> Vos elegís cómo combinar tus platos, nosotros nos encargamos del resto.</span>
+                    <span><strong>Aptas freezer y microondas:</strong> Comida casera deliciosa, balanceada y lista en pocos minutos.</span>
                 </div>
                 <div class="check-item-line">
                     <span class="bullet-sun">★</span>
-                    <span><strong>Pago simple por transferencia bancaria:</strong> Pedinos el menú y armá tu semana con Palta.</span>
+                    <span><strong>10% de descuento por transferencia:</strong> En pedidos mayores a 30 viandas ($286.200 las 30 viandas).</span>
                 </div>
             </div>
         </article>
 
-        <!-- 7. FOOTER NOBLE CON ICONOS VECTORIALES OFICIALES -->
+        <!-- 7. FOOTER NOBLE SIN TIENDA ONLINE -->
         <footer class="hub-noble-footer">
             <div class="footer-brand-monument">PALTA MEAL PLANS</div>
             
@@ -1154,11 +1168,6 @@
                 <!-- Facebook Oficial -->
                 <a href="https://web.facebook.com/people/Meal-Plans/61575672778497/#" target="_blank" rel="noopener noreferrer" class="social-icon-bubble" aria-label="Facebook">
                     <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                </a>
-                
-                <!-- Tiendanube Oficial -->
-                <a href="https://paltamealplans.mitiendanube.com" target="_blank" rel="noopener noreferrer" class="social-icon-bubble" aria-label="Tiendanube">
-                    <svg viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"/></svg>
                 </a>
                 
                 <!-- WhatsApp Oficial -->
